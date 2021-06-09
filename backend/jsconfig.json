@@ -1,0 +1,18 @@
+{
+  "exclude": [
+    "node_modules",
+    ".next",
+  ],
+  "include": [
+    "./**/*",
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "*",
+        "src/*"
+      ]
+    }
+  }
+}

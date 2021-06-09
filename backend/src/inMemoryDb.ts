@@ -17,8 +17,11 @@ export const findOne = (id: string) => {
     return null;
 }
 
-export const filterItems = (filter: filterInterface) => {
-    const { filtrable, limit = 10, offset = 0 } = filter;
+export const filterItems = (filter?: filterInterface | null) => {
+    const filtrable = filter?.filtrable || null;
+    const limit = filter?.limit || 100;
+    const offset = filter?.offset || 0;
+
     const name = filtrable ? filtrable && filtrable.name : undefined;
     const filteredCryptoStockExchanges: any = [];
     for (let i = 0; i < cryptoStockExchanges.length; i++) {

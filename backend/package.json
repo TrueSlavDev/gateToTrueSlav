@@ -6,10 +6,10 @@
   "author": "DigiSoul - Roman Almashi",
   "license": "MIT",
   "scripts": {
-    "build": "NODE_ENV=production webpack --config webpack.config.js --mode production",
+    "build": "set NODE_ENV=production & webpack --config webpack.config.js --mode production",
     "build:dev": "webpack --config webpack.config.js --mode development --watch",
-    "start": "NODE_ENV=production node ./dist/services.bundle.js",
-    "start:dev": "nodemon ./dist/services.bundle.js"
+    "start": "set NODE_ENV=production & node ./dist/index.js",
+    "start:dev": "nodemon ./dist/index.js"
   },
   "dependencies": {
     "apollo-server-express": "^2.19.0",

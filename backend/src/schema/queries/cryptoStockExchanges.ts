@@ -12,7 +12,7 @@ export default {
     args: {
         filter: {
             name: 'filter',
-            type: new GraphQLNonNull(filterInputType),
+            type: filterInputType,
         },
     },
     resolve: async (
